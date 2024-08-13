@@ -77,3 +77,8 @@ docs/_build/
 .vscode/
 *.sublime-project
 *.sublime-workspace
+
+# Temporary files
+*.swp
+*.swo
+*.tmp

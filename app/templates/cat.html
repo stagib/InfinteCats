@@ -1,0 +1,8 @@
+{% if cat_image_url %}
+<img
+  src="{{ cat_image_url }}"
+  alt="A cute cat"
+  style="max-width: 100%; height: auto" />
+{% else %}
+<p>Sorry, couldn't fetch a cat image at the moment.</p>
+{% endif %}

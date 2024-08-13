@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Cats</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/htmx/2.0.2/htmx.min.js"
+      integrity="sha512-iRA+DJgDLUKPk+pqGpAM3+wSDeO5iKQkYXGtIv4+EA8oJWN1mewMJD7kWC9hHCyUTdey9bQypAhx6PASWShjOw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <button hx-get="/cat" hx-target="#target">Spawn cat</button>
+    <div id="target"></div>
+    <img src="https://cataas.com/cat" alt="cat" />
+  </body>
+</html>

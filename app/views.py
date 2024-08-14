@@ -17,14 +17,20 @@ def get_cat():
     return render_template("cat.html", cat_image_url=cat_image_url, cats=int(q))
 
 @views.route("/cat/image", methods=["GET"])
-def get_cat_image():
-   cat_image_url = "https://cataas.com/cat?" + str(random.randint(1, 10000))
-   image_tag = f"<img src='{cat_image_url}' alt='cat ran away'>"
-   return render_template_string(image_tag)
+def get_cat_image():      
+    chance = random.randint(1, 6)
+
+    if chance == 1:
+        cat_image_url = "https://cataas.com/cat/gif?" + str(random.randint(1, 10000))
+    else:
+        cat_image_url = "https://cataas.com/cat?" + str(random.randint(1, 10000))
+    
+    image_tag = f"<img src='{cat_image_url}' alt='cat ran away'>"
+    return render_template_string(image_tag)
 
 @views.route("/qoute", methods={"GET"})
 def get_qoute():
     response = requests.get("https://api.quotable.io/random?" + str(random.randint(1, 10000)))
     quote = response.json()
 
-    return render_template("quote.html", quote=quote)
+    return render_template("quote.html", quote=quote)    

@@ -1,5 +1,11 @@
 # Infinite Cats
 
+Random cats and quotes.
+
+<img src="images/cat.png" alt="cat" width="400">
+
+<img src="images/cat.gif" alt="cat" >
+
 ## Running app
 
 1. Create virtual env

@@ -1,8 +1,17 @@
-{% if cat_image_url %}
-<img
-  src="{{ cat_image_url }}"
-  alt="A cute cat"
-  style="max-width: 100%; height: auto" />
-{% else %}
-<p>Sorry, couldn't fetch a cat image at the moment.</p>
-{% endif %}
+<div class="post flex flex-col mb-4 p-4 bg-white rounded-md">
+  <div class="flex-auto flex mb-2">
+    <p class="font-semibold mr-2">Author</p>
+    <p class="font-thin">@sadfasdfk</p>
+  </div>
+  <div class="flex-auto mb-2">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora possimus
+      quis corporis, molestiae accusamus reprehenderit alias praesentium
+      delectus voluptatibus expedita eligendi, rem porro quasi nisi, natus ipsum
+      omnis velit? Aliquam!
+    </p>
+  </div>
+  <div class="flex-auto w-full h-full mb-2 overflow-hidden">
+    <img src="{{ cat_image_url }}" alt="cat" class="rounded-md" />
+  </div>
+</div>

@@ -1,18 +1,7 @@
 <div hx-get="/cat?q=10" hx-trigger="revealed" hx-swap="afterend">
   {% for cat in range(cats) %}
   <div class="post flex flex-col mb-4 p-4 bg-white rounded-md">
-    <div class="flex-auto flex mb-2">
-      <p class="font-semibold mr-2">Author</p>
-      <p class="font-thin">@sadfasdfk</p>
-    </div>
-    <div class="flex-auto mb-2">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora
-        possimus quis corporis, molestiae accusamus reprehenderit alias
-        praesentium delectus voluptatibus expedita eligendi, rem porro quasi
-        nisi, natus ipsum omnis velit? Aliquam!
-      </p>
-    </div>
+    <div hx-get="/qoute" hx-trigger="load" hx-swap="outerHTML"></div>
     <div class="flex-auto w-full h-full mb-2 overflow-hidden">
       <img hx-get="/cat/image" hx-trigger="load" hx-swap="outerHTML" />
     </div>
